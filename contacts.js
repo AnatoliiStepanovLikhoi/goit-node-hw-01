@@ -3,14 +3,26 @@ const path = require("path");
 
 require("colors");
 
-/*
- * Розкоментуйте і запиши значення
- * const contactsPath = ;
- */
+const contactsPath = path.resolve("./db/contacts.json");
 
 // TODO: задокументувати кожну функцію
-function listContacts() {
-  // ...твій код
+async function getContactsData() {
+  try {
+    const data = await fs.readFile(contactsPath, "utf-8");
+    const contacts = JSON.parse(data.toString());
+
+    return contacts;
+  } catch (error) {
+    return error;
+  }
+}
+
+async function listContacts() {
+  try {
+    console.table(await getContactsData());
+  } catch (error) {
+    return error;
+  }
 }
 
 function getContactById(contactId) {
@@ -24,3 +36,5 @@ function removeContact(contactId) {
 function addContact(name, email, phone) {
   // ...твій код
 }
+
+module.exports = { listContacts, getContactById, removeContact, addContact };

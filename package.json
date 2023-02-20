@@ -15,7 +15,6 @@
   "keywords": [],
   "author": "Anatolii Stepanov-Likhoi",
   "license": "ISC",
-  "type": "module",
   "homepage": "https://github.com/AnatoliiStepanovLikhoi/goit-node-hw-01#readme",
   "dependencies": {
     "colors": "^1.4.0",
