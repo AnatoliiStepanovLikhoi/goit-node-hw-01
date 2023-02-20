@@ -1,8 +1,8 @@
 const {
   listContacts,
-  //   getContactById,
+  getContactById,
   //   removeContact,
   //   addContact,
 } = require("./contacts");
 
-console.log(listContacts());
+console.log(getContactById(7));

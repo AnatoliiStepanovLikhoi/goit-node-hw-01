@@ -25,8 +25,23 @@ async function listContacts() {
   }
 }
 
-function getContactById(contactId) {
-  // ...твій код
+async function getContactById(contactId) {
+  try {
+    const contacts = await getContactsData();
+
+    const contactById = contacts.filter(
+      (contact) => contact.id === contactId.toString()
+    );
+
+    // console.log(contactById);
+
+    if (!contactById.length)
+      return console.log(`We found no contact with ID ${contactId} `);
+
+    console.table(contactById);
+  } catch (error) {
+    return error;
+  }
 }
 
 function removeContact(contactId) {
