@@ -18,6 +18,8 @@
   "homepage": "https://github.com/AnatoliiStepanovLikhoi/goit-node-hw-01#readme",
   "dependencies": {
     "colors": "^1.4.0",
-    "nodemon": "^2.0.20"
+    "commander": "^10.0.0",
+    "nodemon": "^2.0.20",
+    "short-unique-id": "^4.4.4"
   }
 }
